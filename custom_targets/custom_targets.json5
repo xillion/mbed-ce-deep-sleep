@@ -1,0 +1,77 @@
+{
+    "PT_LOGGER_L433": {
+    "inherits": ["MCU_STM32L433xC"],
+    "config": {
+
+    },
+    "overrides": {
+        "clock_source": "USE_PLL_MSI",
+        "lse_available": 1
+    },
+    "extra_labels_add": [
+        "MT25QL512"
+    ],
+    "device_has_add": [
+        "QSPI",
+        "USBDEVICE",
+        "SLEEP"
+    ],
+    "components_add" : ["QSPIF", "FLASHIAP"],
+    "device_has_remove": [
+        "CAN"
+    ],
+    "macros_add": [
+        "MBED_TICKLESS",
+        "MT25QL512",
+        "LSE_VALUE=32768",
+        "LSE_STARTUP_TIMEOUT=5000"],
+    //"OUTPUT_EXT": "bin",
+    "memory_banks": {
+            "IRAM1": {
+                "access": {
+                    "execute": false,
+                    "non_secure": false,
+                    "non_secure_callable": false,
+                    "peripheral": false,
+                    "read": true,
+                    "secure": false,
+                    "write": true
+                },
+                "default": true,
+                "size": 49152,
+                "start": 536870912,
+                "startup": false
+            },
+            "IRAM2": {
+                "access": {
+                    "execute": false,
+                    "non_secure": false,
+                    "non_secure_callable": false,
+                    "peripheral": false,
+                    "read": true,
+                    "secure": false,
+                    "write": true
+                },
+                "default": false,
+                "size": 16384,
+                "start": 268435456,
+                "startup": false
+            },
+            "IROM1": {
+                "access": {
+                    "execute": true,
+                    "non_secure": false,
+                    "non_secure_callable": false,
+                    "peripheral": false,
+                    "read": true,
+                    "secure": false,
+                    "write": false
+                },
+                "default": true,
+                "size": 262144,
+                "start": 134217728,
+                "startup": true
+            }
+        }
+    }
+}

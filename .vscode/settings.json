@@ -1,0 +1,45 @@
+{
+   "cmake.buildDirectory": "${workspaceFolder}/build/${variant:board}-${variant:buildType}",
+   "cmake.generator": "Ninja",
+   "cmake.configureOnOpen": false,
+   "cmake.options.statusBarVisibility": "compact",
+   "cmake.options.advanced": {
+      "build": {
+         "statusBarVisibility": "visible",
+         "inheritDefault": "hidden"
+      },
+      "launch": {
+         "statusBarVisibility": "visible",
+         "inheritDefault": "hidden"
+      },
+      "debug": {
+         "statusBarVisibility": "visible",
+         "inheritDefault": "hidden"
+      },
+      "cpack": {
+         "statusBarVisibility": "hidden",
+         "inheritDefault": "hidden"
+      },
+      "workflow": {
+         "statusBarVisibility": "hidden",
+         "inheritDefault": "hidden"
+      }
+   },
+   "files.associations": {
+      "iomanip": "cpp",
+      "algorithm": "cpp",
+      "mbed.h": "c",
+      "sleep_api.h": "c",
+      "cstdint": "cpp",
+      "*.tcc": "cpp",
+      "functional": "c",
+      "mstd_atomic": "cpp",
+      "array": "cpp",
+      "string": "cpp",
+      "string_view": "cpp",
+      "span": "cpp",
+      "mstd_iterator": "cpp",
+      "compare": "cpp",
+      "format": "cpp"
+   }
+}

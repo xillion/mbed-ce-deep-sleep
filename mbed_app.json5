@@ -1,0 +1,42 @@
+{
+    "target_overrides": {
+    "*": {
+        "target.retarget-console": false,
+        "platform.cpu-stats-enabled": true,
+        //"target.printf_lib": "minimal-printf",
+        "target.lse_available": true,
+        "target.lse_bypass": true,
+        "target.macros_add": [
+        "ADC_OVERSAMPLING", 
+        "ADC_OVERSAMPLING_16BIT", 
+        "MBED_TICKLESS"
+        ],
+        //"target.lpticker_lptim": 1,
+        "target.lpticker_lptim_clock": 32,
+        "target.console-uart": false,
+        "platform.callback-nontrivial": false,
+        "target.tickless-from-us-ticker": false,
+        "target.deep-sleep-latency": 4,
+        "qspif.QSPI_MIN_READ_SIZE" : 1,
+        "qspif.QSPI_MIN_PROG_SIZE" : 256,
+        "target.components_add": ["QSPIF", "FLASHIAP"],
+        "target.device_has_add": [
+        "DEVICE_USBDEVICE",     
+        "DEVICE_QSPI",          
+        "DEVICE_FLASH",         
+        "DEVICE_CRC",           
+        "DEVICE_ANALOGIN",      
+        "DEVICE_WATCHDOG",      
+        "DEVICE_LPTICKER",      
+        "DEVICE_USTICKER"        
+        ],
+        "target.device_has_remove": [
+        "DEVICE_I2CSLAVE",
+        "DEVICE_SPI_ASYNCH",
+        "DEVICE_SPISLAVE",
+        "DEVICE_MPU",
+        "DEVICE_TRNG" 
+      ],
+    }
+  }
+}
